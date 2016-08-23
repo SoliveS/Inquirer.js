@@ -1,3 +1,31 @@
+Modified by Roman Pushkin
+=========================
+
+Basically, interruption mechanism was just added to `list`. Here is example of
+how you can interrupt:
+
+```js
+'use strict';
+var inquirer = require('..');
+
+inquirer.prompt({
+  type: 'list',
+  choices: ['aa', 'bb', 'cc'],
+  name: 'test',
+  message: 'Your choice?'
+});
+
+setTimeout(function() {
+  // interrupt after 1 second
+  inquirer.pubsub.emit('interrupt-prompt');
+}, 1000);
+```
+
+So, `pubsub` API was added. Note that this functionality is implemented for list
+only.
+
+See [interrupted example](examples/list-interrupted.js).
+
 Inquirer.js
 ===========
 
