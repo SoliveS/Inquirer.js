@@ -1,6 +1,8 @@
 Modified by Roman Pushkin
 =========================
 
+[![asciicast](https://asciinema.org/a/45vc0uuhrlc0c3zu12ldtpwsx.png)](https://asciinema.org/a/45vc0uuhrlc0c3zu12ldtpwsx)
+
 Basically, interruption mechanism was just added to `list`. Here is example of
 how you can interrupt:
 
