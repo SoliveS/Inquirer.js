@@ -14,10 +14,10 @@ inquirer.prompt({
 
 setTimeout(function() {
   // interrupt after 1 second
-  inquirer.pubsub.emit('interrupt-prompt');
+  inquirer.interruptPrompt();
 
   // make sure we don't have side effects when interrupted for the second time
   setTimeout(function() {
-    inquirer.pubsub.emit('interrupt-prompt');
+    inquirer.interruptPrompt();
   }, 1000);
 }, 1000);

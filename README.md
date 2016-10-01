@@ -19,12 +19,11 @@ inquirer.prompt({
 
 setTimeout(function() {
   // interrupt after 1 second
-  inquirer.pubsub.emit('interrupt-prompt');
+  inquirer.interruptPrompt();
 }, 1000);
 ```
 
-So, `pubsub` API was added. Note that this functionality is implemented for list
-only.
+So, `interruptPrompt()` API was added. Note that this functionality is implemented for list only.
 
 See [interrupted example](examples/list-interrupted.js).
 
