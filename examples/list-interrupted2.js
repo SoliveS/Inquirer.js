@@ -18,7 +18,7 @@ inquirer.prompt({
 
 setTimeout(function() {
   // interrupt after 1 second
-  inquirer.interruptPrompt();
+  inquirer.interruptPrompt(() => { console.log('interrupted callback!!!'); });
 
   // make sure we don't have side effects when interrupted for the second time
   // setTimeout(function() {
@@ -57,5 +57,3 @@ setTimeout(function() {
   });
 
 }, 4000);
-
-
